@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@fiquu/shorten | @fiquu/shorten</title>
+	<title>@fiquu/template | @fiquu/template</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2335,7 +2335,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="index.html">@fiquu/shorten</a></strong>
+					<strong><a href="index.html">@fiquu/template</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2365,16 +2365,132 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-variable">
+			<a href="globals.html#prettyprint" class="tsd-kind-icon">pretty<wbr>Print</a>
+		</li>
+		<li class=" tsd-kind-variable">
+			<a href="globals.html#timestamp" class="tsd-kind-icon">timestamp</a>
+		</li>
+		<li class=" tsd-kind-function">
+			<a href="globals.html#createlogger" class="tsd-kind-icon">create<wbr>Logger</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
-			<a href="#template" id="template" style="color: inherit; text-decoration: none;">
-				<h1>template</h1>
+			<a href="#fiquulogger" id="fiquulogger" style="color: inherit; text-decoration: none;">
+				<h1>@fiquu/logger</h1>
 			</a>
-			<p>fiquu project template.</p>
+			<p>Simple console logger based on <a href="https://github.com/winstonjs/winston">Winston</a>.</p>
+			<p>It&#39;s really just a preconfigured instance of a Winston Logger.</p>
+			<a href="#instalation" id="instalation" style="color: inherit; text-decoration: none;">
+				<h2>Instalation</h2>
+			</a>
+			<pre><code class="language-sh">npm i @fiquu/logger</code></pre>
+			<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+				<h2>Usage</h2>
+			</a>
+			<p>Let&#39;s assume you run you app with:</p>
+			<p><code>$ LOG_LEVEL=info node index.js</code></p>
+			<p>Then, the logger will log anything that has lower priority than the <code>LOG_LEVEL</code> env variable:</p>
+			<p><code>./some/module.ts</code>:</p>
+			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createLogger } <span class="hljs-keyword">from</span> <span class="hljs-string">'@fiquu/logger'</span>;
+
+<span class="hljs-keyword">const</span> log: FixedLogger = createLogger(<span class="hljs-string">'My App Module'</span>);
+
+log.debug(<span class="hljs-string">'This is not necessary on production.'</span>); <span class="hljs-comment">// Will not log</span>
+log.info(<span class="hljs-string">'This is very informational.'</span>);
+log.warn(<span class="hljs-string">'Beware! You\'re about to do a thing.'</span>);
+log.error(<span class="hljs-string">'IT FAILED!'</span>);
+log.error(<span class="hljs-string">'IT FAILED! SEE DETAILS:'</span>, {
+  extra: <span class="hljs-string">'Yeah, it was bad...'</span>,
+  error
+});</code></pre>
+			<p>Read more about <a href="https://github.com/winstonjs/winston#using-logging-levels">Winston&#39;s log levels</a> to know what will be logged depending on your <code>LOG_LEVEL</code> env variable.</p>
+			<a href="#api-docs" id="api-docs" style="color: inherit; text-decoration: none;">
+				<h2>API Docs</h2>
+			</a>
+			<p>Please visit <a href="https://fiquu.github.io/logger/">https://fiquu.github.io/logger/</a></p>
 		</div>
+		<section class="tsd-panel-group tsd-index-group">
+			<h2>Index</h2>
+			<section class="tsd-panel tsd-index-panel">
+				<div class="tsd-index-content">
+					<section class="tsd-index-section ">
+						<h3>Variables</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable"><a href="globals.html#prettyprint" class="tsd-kind-icon">pretty<wbr>Print</a></li>
+							<li class="tsd-kind-variable"><a href="globals.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function"><a href="globals.html#createlogger" class="tsd-kind-icon">create<wbr>Logger</a></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable">
+				<a name="prettyprint" class="tsd-anchor"></a>
+				<h3>pretty<wbr>Print</h3>
+				<div class="tsd-signature tsd-kind-icon">pretty<wbr>Print<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">prettyPrint</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fiquu/logger/blob/cffb0a1/src/index.ts#L3">index.ts:3</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable">
+				<a name="timestamp" class="tsd-anchor"></a>
+				<h3>timestamp</h3>
+				<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">timestamp</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/fiquu/logger/blob/cffb0a1/src/index.ts#L3">index.ts:3</a></li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="createlogger" class="tsd-anchor"></a>
+				<h3>create<wbr>Logger</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">create<wbr>Logger<span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fiquu/logger/blob/cffb0a1/src/index.ts#L12">index.ts:12</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Creates a new logger with the provided component name and <code>@fiquu/logger</code> as module name.</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>component: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The name of the component to log for.</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Logger</span></h4>
+						<p>The logger instance.</p>
+					</li>
+				</ul>
+			</section>
+		</section>
 		<footer class="with-border-bottom">
 			<div class="container">
 				<h2>Legend</h2>
