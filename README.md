@@ -1,5 +1,11 @@
 # @fiquu/logger
 
+[![Build Status](https://travis-ci.org/fiquu/logger.svg?branch=master)](https://travis-ci.org/fiquu/logger)
+![GitHub](https://img.shields.io/github/license/fiquu/logger)
+![GitHub last commit](https://img.shields.io/github/last-commit/fiquu/logger)
+![npm (scoped)](https://img.shields.io/npm/v/@fiquu/logger)
+![npm](https://img.shields.io/npm/dw/@fiquu/logger)
+
 Simple console logger based on [Winston](https://github.com/winstonjs/winston).
 
 It's really just a preconfigured instance of a Winston Logger.
