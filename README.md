@@ -25,6 +25,7 @@ Let's assume you run you app with:
 Then, the logger will log anything that has lower priority than the `LOG_LEVEL` env variable:
 
 `./some/module.ts`:
+
 ```ts
 import { createLogger } from '@fiquu/logger';
 
@@ -43,4 +44,5 @@ log.error('IT FAILED! SEE DETAILS:', {
 Read more about [Winston's log levels](https://github.com/winstonjs/winston#using-logging-levels) to know what will be logged depending on your `LOG_LEVEL` env variable.
 
 ## API Docs
-Please visit https://fiquu.github.io/logger/
+
+Please visit [the documentation page](https://fiquu.github.io/logger/) for more information.
