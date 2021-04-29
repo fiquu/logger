@@ -1,3 +1,1 @@
-var typedoc = typedoc || {};
-            typedoc.search = typedoc.search || {};
-            typedoc.search.data = {"kinds":{"32":"Variable","64":"Function"},"rows":[{"id":0,"kind":32,"name":"timestamp","url":"globals.html#timestamp","classes":"tsd-kind-variable"},{"id":1,"kind":32,"name":"prettyPrint","url":"globals.html#prettyprint","classes":"tsd-kind-variable"},{"id":2,"kind":64,"name":"createLogger","url":"globals.html#createlogger","classes":"tsd-kind-function"}]};
+window.searchData = {"kinds":{"64":"Function"},"rows":[{"id":0,"kind":64,"name":"createLogger","url":"modules.html#createlogger","classes":"tsd-kind-function"}],"index":{"version":"2.3.9","fields":["name","parent"],"fieldVectors":[["name/0",[0,2.877]],["parent/0",[]]],"invertedIndex":[["createlogger",{"_index":0,"name":{"0":{}},"parent":{}}]],"pipeline":[]}}
